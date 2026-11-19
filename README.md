@@ -61,12 +61,14 @@ Não instale nem mude nada ainda. Mostre o plano e espere eu dizer sim.
 ### Rodar as demonstrações
 
 ```bash
+git clone https://github.com/inematds/telegram-claude-jarvis && cd telegram-claude-jarvis
+
 # Opção 1 — Claude Code de verdade (assinatura)
-cd ponte-opcao1 && ./preparar-sandbox.sh && python3 server.py 8794
+(cd ponte-opcao1 && ./preparar-sandbox.sh && python3 server.py 8794)
 # abra http://127.0.0.1:8794 e pergunte: "Quanto espaço livre tem no disco do servidor?"
 
 # Opção 2 — Intelecto v2 com cérebro de teste
-cd ponte-opcao2 && INTELECTO_V2=~/projetos/intelecto-v2 python3 server.py 8798   # o servidor é este arquivo; não precisa instalar o intelecto com pip
+(cd ponte-opcao2 && INTELECTO_V2=~/projetos/intelecto-v2 python3 server.py 8798)   # em outro terminal; não precisa instalar o intelecto com pip
 # abra http://127.0.0.1:8798 e mande: "lembre que o meu servidor de backup se chama Atlas", "rode: df -h /", "rode: rm -r logs"
 ```
 

@@ -16,8 +16,25 @@ def norm(s):
     return re.sub(r"[^a-z0-9]+", " ", s).strip()
 
 
+NUM = {"um": "1", "dois": "2", "tres": "3", "quatro": "4", "cinco": "5", "seis": "6", "sete": "7", "oito": "8",
+       "nove": "9", "dez": "10", "doze": "12", "trinta": "30"}
+
+
+def igual(a, b):
+    """Palavra falada x palavra do texto, tolerando o Whisper ('Cloud' por 'Claude', '12' por 'doze')."""
+    if a == b or NUM.get(a) == b or NUM.get(b) == a:
+        return True
+    from difflib import SequenceMatcher
+    return min(len(a), len(b)) >= 4 and SequenceMatcher(None, a, b).ratio() >= 0.72
+
+
 def ancoras(palavras, frases):
-    ws = [norm(p["w"]) for p in palavras]
+    # o Whisper às vezes junta palavras numa só ("inema.club") ou separa; a busca é por palavra normalizada
+    ws = []
+    idx = []
+    for n, p in enumerate(palavras):
+        for parte in norm(p["w"]).split():
+            ws.append(parte); idx.append(n)
     out, pos = {}, 0
     for nome, frase in frases.items():
         alvo = norm(frase).split()
@@ -25,7 +42,7 @@ def ancoras(palavras, frases):
         for i in range(pos, len(ws)):
             ok = True
             for k, a in enumerate(alvo):
-                if i + k >= len(ws) or ws[i + k] != a:
+                if i + k >= len(ws) or not igual(ws[i + k], a):
                     ok = False
                     break
             if ok:
@@ -33,7 +50,7 @@ def ancoras(palavras, frases):
                 break
         if achou is None:   # tolerância: 1ª palavra que bate o começo da frase
             raise SystemExit(f"âncora não achada: {nome} = '{frase}' (a partir da palavra {pos}: {' '.join(ws[pos:pos+12])})")
-        out[nome] = round(palavras[achou]["ini"], 3)
+        out[nome] = round(palavras[idx[achou]]["ini"], 3)
         pos = achou + 1
     return out
 
