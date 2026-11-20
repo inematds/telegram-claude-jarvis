@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Jarvis on Telegram — let your server work from your phone</title>
+<title>CONCEPT · Your Jarvis on Telegram — let your server work from your phone</title>
 <meta name="description" content="Send a request on Telegram, and AI works on your server, asking before doing anything risky. Two ways to use it: Claude Code remote control and Intelecto’s Jarvis, with memory, rules, and safeguards. Free on inema.club, right on the internet.">
 <link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/telegram-claude-jarvis/guia/">
 <link rel="alternate" hreflang="en" href="https://inematds.github.io/telegram-claude-jarvis/guia/en/">
@@ -82,6 +82,12 @@
   @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
   @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
   .vid video{width:100%;aspect-ratio:16/9;border-radius:10px;background:#000;display:block;margin-bottom:10px}
+  .tab-wrap{overflow-x:auto;margin-top:14px;border:1px solid var(--line);border-radius:12px}
+  .tab-fmt{width:100%;border-collapse:collapse;font-size:14px;min-width:720px}
+  .tab-fmt th,.tab-fmt td{padding:10px 12px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
+  .tab-fmt thead th{border-top:0;color:var(--amb, #FACC15);font-size:13px;letter-spacing:.02em}
+  .tab-fmt td:first-child{font-weight:700;white-space:nowrap}
+  .tab-nota{font-size:14px;margin:10px 0 0}
   .bloco-vid{margin-top:26px} .bloco-vid h3.tit{margin:0 0 12px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
   .card h3{font-size:1.05rem;margin-bottom:.4em}
@@ -168,7 +174,7 @@
 <body>
 
 <nav><div class="wrap">
-  <a class="brand" href="#top"><span class="emoji">📲</span> Your Jarvis on Telegram</a>
+  <a class="brand" href="#top"><span class="emoji">📲</span> Your Jarvis on Telegram · CONCEPT</a>
   <span class="sep">|</span>
   <span class="clubpro">
     <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
@@ -191,7 +197,7 @@
   <div class="glow"></div>
   <div class="wrap">
     <div>
-      <span class="chip">Telegram · Claude Code · Intelecto</span>
+      <span class="chip">CONCEPT · Telegram · Claude Code · Intelecto</span>
       <h1><span class="amb">Your Jarvis on Telegram</span>: send a request from your phone, and AI does the work on your computer.</h1>
       <p class="lead">You remember a task while away from your computer. Send a message on Telegram, just as you’d talk to a person, and AI does the work on your computer and replies in the same chat. Before deleting, changing, or sending anything outside, it asks: “Confirm?”</p>
       <p class="mut" style="margin:-.6em 0 1.4em;font-size:.95rem">Intelecto’s Jarvis already works with Telegram. With Claude Code remote control, AI builds the Telegram bot with you.</p>
@@ -255,18 +261,25 @@
   <h2>Videos with <span class="amb">Nei explaining</span></h2>
   <p class="sub">Two different things, each with three short videos: the parts animated, a short film and the real demo. Narrated in Portuguese.</p>
   <!-- VIDEO: arquivos em guia/assets/videos (1a-3a = controle remoto, 1b-3b = Jarvis); trocar por embed do YouTube quando publicados -->
+  <p class="mut tab-nota">The three videos for each option will tell the same script, each in its own way: first the parts, then the flow, then real use. Full versions, up to 2.5 minutes, are in production; the short ones above already show each format. Narrated in Portuguese.</p>
   <div class="bloco-vid"><h3 class="tit">📲 Option 1 · Claude Code remote control</h3>
   <div class="grid g3">
     <div class="card vid"><video controls preload="none" playsinline poster="../assets/videos/1a.jpg" src="../assets/videos/1a.mp4"></video><h3>The parts</h3><p class="mut">Telegram, bot, Claude Code and your "yes" before anything changes.</p></div>
     <div class="card vid"><video controls preload="none" playsinline poster="../assets/videos/2a.jpg" src="../assets/videos/2a.mp4"></video><h3>The message's path</h3><p class="mut">From your phone to the server and the answer back in the chat.</p></div>
     <div class="card vid"><video controls preload="none" playsinline poster="../assets/videos/3a.jpg" src="../assets/videos/3a.mp4"></video><h3>In practice</h3><p class="mut">Real requests: checking the disk and deleting files only after approval.</p></div>
-  </div></div>
+  </div>
+  <h3 class="tit" style="margin-top:22px">How each format tells the same story</h3>
+  <div class="tab-wrap"><table class="tab-fmt"><thead><tr><th>Part</th><th>Base script (same in all 3)</th><th>Parts animation</th><th>Short film</th><th>Real demo</th></tr></thead><tbody><tr><td>Hook</td><td>You away from your computer, and it working for you without changing anything without your yes</td><td>Cover with the headline</td><td>You on the street, home in the background</td><td>Phone in hand, Telegram open</td></tr><tr><td>The parts</td><td>Telegram (front desk), bot (doorman who checks it's you), Claude Code (understands and decides), terminal (engine room)</td><td>Each part lights up in the diagram</td><td>Each part enters the scene as someone in the building</td><td>The real screen of each part</td></tr><tr><td>The flow</td><td>Message there and back: the bot checks the sender, the first pass only reads, changes wait for your yes</td><td>Arrows running through the diagram, lock highlighted</td><td>The note traveling to the server and back to the chat</td><td>The bridge log, live</td></tr><tr><td>Use</td><td>Ask about disk space; delete old logs only after "confirm?"; strangers never reach Claude Code</td><td>The three cases in the diagram</td><td>The three cases acted out</td><td>The real Telegram conversation</td></tr><tr><td>Closing</td><td>A question for you + free at inema.club</td><td>End card</td><td>End card</td><td>End card</td></tr></tbody></table></div>
+  </div>
   <div class="bloco-vid"><h3 class="tit">🤖 Option 2 · The Intelecto Jarvis</h3>
   <div class="grid g3">
     <div class="card vid"><video controls preload="none" playsinline poster="../assets/videos/1b.jpg" src="../assets/videos/1b.mp4"></video><h3>The 8 parts</h3><p class="mut">Identity, memory, tools, lock, sandbox and a brain you can swap.</p></div>
     <div class="card vid"><video controls preload="none" playsinline poster="../assets/videos/2b.jpg" src="../assets/videos/2b.mp4"></video><h3>Inside the Jarvis</h3><p class="mut">What each part does when a request arrives.</p></div>
     <div class="card vid"><video controls preload="none" playsinline poster="../assets/videos/3b.jpg" src="../assets/videos/3b.mp4"></video><h3>In practice</h3><p class="mut">The Jarvis remembering, checking, asking for approval and refusing what is dangerous.</p></div>
-  </div></div></div>
+  </div>
+  <h3 class="tit" style="margin-top:22px">How each format tells the same story</h3>
+  <div class="tab-wrap"><table class="tab-fmt"><thead><tr><th>Part</th><th>Base script (same in all 3)</th><th>Parts animation</th><th>Short film</th><th>Real demo</th></tr></thead><tbody><tr><td>Hook</td><td>An assistant that remembers you, follows your rules and never does anything stupid on its own</td><td>Cover with the headline</td><td>The Jarvis assembled, parts dimmed</td><td>Telegram open in the Jarvis chat</td></tr><tr><td>The parts</td><td>Channel, loop with brake, identity, swappable brain, memory, tools, lock and vault, sandbox</td><td>Each part lights up in the diagram</td><td>Each part enters the scene (intercom, badge, engine, notebook, hands, guard, closed room)</td><td>The real file or screen of each part in Intelecto</td></tr><tr><td>The flow</td><td>The channel checks who it is; identity and memory come along; the brain picks a tool; the lock decides: reading passes, changes ask for OK, destructive is refused</td><td>The request going through the 8 parts</td><td>The request traveling inside the Jarvis</td><td>The panel and log, live</td></tr><tr><td>Use</td><td>Save and recall the supplier; check the disk; delete drafts with your OK; restarting the server is refused</td><td>The four cases in the diagram</td><td>The four cases acted out</td><td>The real conversation, with Claude Code as the brain</td></tr><tr><td>Closing</td><td>A question for you + free at inema.club</td><td>End card</td><td>End card</td><td>End card</td></tr></tbody></table></div>
+  </div>
 </div></section>
 
 <section id="como"><div class="wrap">
